@@ -8,13 +8,13 @@ $("ul").on("click",".del", function(event) {
 	$(this).parent().fadeOut(500, function() {
 		$(this).remove();
 	});
-	setFocus();
+	// setFocus();
 	event.stopPropagation();
 });
 
 $("ul").on("click",".fav", function(event) {
 	$(this).children('.fa-star-o, .fa-star').toggleClass('fa-star fa-star-o');
-	setFocus();
+	// setFocus();
 	event.stopPropagation();
 });
 
@@ -39,7 +39,7 @@ function setFocus() {
 	$("input[type='text']").focus();
 };
 
-$("input[type='text']").on("blur", setFocus);
+// $("input[type='text']").on("blur", setFocus);
 
 $( function() {
 	$( ".sortable" ).sortable();
