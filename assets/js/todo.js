@@ -44,4 +44,5 @@ function setFocus() {
 $( function() {
 	$( ".sortable" ).sortable();
 	$( ".sortable" ).disableSelection();
+	$( ".sortable" ).draggable();
 } );
