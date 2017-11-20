@@ -28,11 +28,11 @@ $("input[type='text']").keypress(function(event) {
 
 $(".fa-plus").on("click", function() {
 	$("input[type='text']").fadeToggle("fast");
-	setFocus();
+	// setFocus();
 });
 
 $(document).ready(function() {
-	setFocus();
+	// setFocus();
 });
 
 function setFocus() {
