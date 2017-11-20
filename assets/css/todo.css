@@ -96,3 +96,29 @@ li:hover .del {
 	color: gray;
 	text-decoration: line-through;
 }
+
+@media only screen and (max-width : 800px) {
+	body {
+		margin: 0;
+	}
+
+	#container {
+		max-width: 800px;
+		width: 100%;
+		margin: 0 auto;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+		background: #F7F7F7;
+	}
+
+	.del {
+		background: #E74C3C;
+		border-radius: 50%;
+		height: 40px;
+		margin-right: 20px;
+		text-align: center;
+		color: white;
+		width: 40px;
+		display: inline-block;
+		opacity: 1;
+	}
+}
