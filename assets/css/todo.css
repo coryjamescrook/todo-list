@@ -113,12 +113,15 @@ li:hover .del {
 	.del {
 		background: #E74C3C;
 		border-radius: 50%;
-		height: 40px;
-		margin-right: 20px;
+		height: 20px;
+		margin: auto 20px auto 10px;
 		text-align: center;
 		color: white;
-		width: 40px;
+		width: 20px;
 		display: inline-block;
+		vertical-align: middle;
+		line-height: 20px;
 		opacity: 1;
+		font-size: 15px;
 	}
 }
