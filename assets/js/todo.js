@@ -5,7 +5,7 @@ $("ul").on("click", "li", function() {
 
 //click on x to delete
 $("ul").on("click",".del", function(event) {
-	$(this).parent().fadeOut(500, function() {
+	$(this).parent().fadeOut(200, function() {
 		$(this).remove();
 	});
 	// setFocus();
@@ -13,9 +13,21 @@ $("ul").on("click",".del", function(event) {
 });
 
 $("ul").on("click",".fav", function(event) {
-	$(this).children('.fa-star-o, .fa-star').toggleClass('fa-star fa-star-o');
-	// setFocus();
+	var star = $(this).children('.fa-star-o, .fa-star');
 	event.stopPropagation();
+
+	star.toggleClass('fa-star fa-star-o');
+
+	if(star.hasClass('fa-star')) {
+		doPin(star.parent().parent());
+	}
+	else {
+		undoPin(star.parent().parent());
+	}
+
+	// console.log(star);
+
+	
 });
 
 $("input[type='text']").keypress(function(event) {
@@ -32,11 +44,19 @@ $(".fa-plus").on("click", function() {
 });
 
 $(document).ready(function() {
-	// setFocus();
+	setFocus();
 });
 
 function setFocus() {
 	$("input[type='text']").focus();
+};
+
+function doPin(el) {
+	$(el).hide().prependTo('#todoList').fadeIn();
+};
+
+function undoPin(el) {
+	$(el).hide().appendTo('#todoList').fadeIn();
 };
 
 // $("input[type='text']").on("blur", setFocus);
