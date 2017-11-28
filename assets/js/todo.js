@@ -8,7 +8,6 @@ $("ul").on("click",".del", function(event) {
 	$(this).parent().fadeOut(200, function() {
 		$(this).remove();
 	});
-	// setFocus();
 	event.stopPropagation();
 });
 
@@ -25,8 +24,6 @@ $("ul").on("click",".fav", function(event) {
 		undoPin(star.parent().parent());
 	}
 
-	// console.log(star);
-
 	
 });
 
@@ -40,7 +37,6 @@ $("input[type='text']").keypress(function(event) {
 
 $(".fa-plus").on("click", function() {
 	$("input[type='text']").fadeToggle("fast");
-	// setFocus();
 });
 
 $(document).ready(function() {
@@ -58,8 +54,6 @@ function doPin(el) {
 function undoPin(el) {
 	$(el).hide().appendTo('#todoList').fadeIn();
 };
-
-// $("input[type='text']").on("blur", setFocus);
 
 $( function() {
 	$( ".sortable" ).sortable();
