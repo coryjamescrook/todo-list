@@ -55,8 +55,8 @@ function undoPin(el) {
 	$(el).hide().appendTo('#todoList').fadeIn();
 };
 
+// 
 $( function() {
-	$( ".sortable" ).sortable();
+	$( ".sortable" ).sortable({delay: 400});
 	$( ".sortable" ).disableSelection();
-	$( ".sortable" ).draggable();
 } );
