@@ -98,11 +98,6 @@ li:hover .del {
 	text-decoration: line-through;
 }
 
-.sortable {
-	-ms-touch-action:initial!important;
-	touch-action:initial!important;
-}
-
 @media only screen and (max-width : 800px) {
 	body {
 		margin: 0;
